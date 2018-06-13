@@ -1,0 +1,24 @@
+<div class="container color-dark">
+  <div class="col">
+    <p>マイ・ページ　ログイン</p>
+  </div>
+  <div class="col">
+  </div>
+</div>
+<div class="container color-light" [@goals]="goals.length">
+  <div class="col">
+    <form>
+      <input type="text" class="txt" name="item" placeholder="メールアドレス" [(ngModel)]="emailText">
+      <input type="password" class="txt" name="item" placeholder="パスワード" [(ngModel)]="pwText">
+      <input type="submit" class="btn" [value]="btnText" (click)="authItem()">
+    </form>
+  </div>
+  <div class="col">
+    <p class="life-container" *ngFor="let goal of goals; let i = index" (click)="removeItem(i)">
+      {{ goal }}
+    </p>
+  </div>
+</div>
+<div class="container color-light">
+  <font color="error">{{ errorText }}</font>
+</div>

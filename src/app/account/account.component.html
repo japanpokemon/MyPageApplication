@@ -1,0 +1,29 @@
+<div>
+    <font size="6"><a class="focus1" routerLink="/customer/{{customerEmail}}" routerLinkActive="active">{{customerName}}</a></font>
+    <font size="6"><a class="focus1" routerLink="/uploadImage/{{customerEmail}}" routerLinkActive="active">本人確認書類</a></font>
+</div>
+<div class="mat-elevation-z8 app-account">
+  <mat-table #table [dataSource]="dataSource" matSort aria-label="Elements">
+    <ng-container matColumnDef="account">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>口座</mat-header-cell>
+      <!-- <mat-cell *matCellDef="let row"><a class="nav-link" (click)="goAccountDetail({{row.account}})">{{row.account}}</a></mat-cell> -->
+      <mat-cell *matCellDef="let row"><a class="focus1" routerLink="/accountDetail/{{row.account}}" routerLinkActive="active">{{row.account}}</a></mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="status">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>ステータス</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.status}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="balance">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>口座残高</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.balance}}</mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns" color="primary"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+  <mat-paginator #paginator
+        [length]="dataSource.data.length"
+        [pageIndex]="0"
+        [pageSize]="5"
+        [pageSizeOptions]="[1, 3, 5, 10, 20, 50]">
+  </mat-paginator>
+</div>

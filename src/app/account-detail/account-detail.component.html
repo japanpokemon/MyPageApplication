@@ -1,0 +1,29 @@
+<div class="container color-dark">
+  <div class="col">
+      <p>口座詳細情報</p>
+  </div>
+  <div class="col">
+  </div>
+</div>
+<div class="container color-light">
+  <div class="col">
+      <dl>
+        <dt>残高:</dt><dd>{{this.data.balance}}</dd>
+        <dt>個人／法人:</dt><dd>{{this.indCorp}}</dd>
+        <dt>口座番号:</dt><dd>{{this.data.account}}</dd>
+        <dt>通貨:</dt><dd>{{this.data.currency}}</dd>
+        <dt>口座種類:</dt><dd>{{this.data.accountType}}</dd>
+        <dt>リバレッジ:</dt><dd>{{this.data.leverage}}</dd>
+        <dt>ステータス:</dt><dd>{{this.data.status}}</dd>
+        <dt>開設日:</dt><dd>{{this.data.createDate}}</dd>
+      </dl>
+  </div>
+  <div class="col">
+      <b>メタトレーダー ログイン情報詳細</b>
+      <dl>
+        <dt>ログインID:</dt><dd>{{this.data.metatraderlogin}}</dd>
+        <dt>パスワード:</dt><dd>{{this.data.metatraderpw}}</dd>
+        <dt>読み取り専用パスワード:</dt><dd>{{this.data.metatraderpwRead}}</dd>
+      </dl>
+  </div>
+</div>

@@ -1,0 +1,75 @@
+.container {
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+.col {
+    padding: .4em 1.3em;
+}
+.color-dark {
+    background: #2885C4;
+}
+.color-light {
+    background: #57B3F1;
+}
+.error {
+    color: #ff7f50;
+}
+input.txt {
+    border: 0;
+    padding: 1em;
+    width: 80%;
+    margin-bottom: 2em;
+}
+input.btn {
+    border: 0;
+    display: block;
+    padding: 1em 3em;
+    background: #A5F883;
+    color: #003A61;
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+.life-container {
+    background: #3FA0E1;
+    padding: .5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+dl {
+    width: 100%;
+    overflow: hidden;
+    //background: #ff0;
+    padding: 0;
+    margin: 0
+}
+dt {
+    float: left;
+    clear: left;
+    font-weight: bold;
+    color: #003A61;
+    width: 45%;
+    //background: #cc0;
+    font-size: 1.5em;
+    padding: .5em;
+    margin: 0
+}
+dd {
+    float: left;
+    width: 45%;
+    //background: #dd0;
+    font-size: 1.5em;
+    padding: .5em;
+    margin: 0
+}
+b {
+    font-weight: bold;
+    font-size: 2em;
+    padding: .5em;
+    color: #ff5050;
+}
+p {
+    float: left;
+    font-weight: bold;
+    color: #003A61;
+    font-size: 2em;
+}
